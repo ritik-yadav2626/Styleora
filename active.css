@@ -1,0 +1,441 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: whitesmoke;
+}
+@font-face {
+    font-family: custom1;
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: custom2;
+    src: url(fonts/Cormorant-Italic.ttf);
+}
+.fa,.faa{
+    font-family: custom1;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    padding-right: 20px;
+    font-weight: 600;
+    transition: text-decoration 0.7s , text-underline-offset 0.7s;
+}
+.fa:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.faa{
+    color: black;
+    
+}
+.div1{
+    display: inline-block;
+}
+.div2{
+    display: inline-block;
+}
+.logo{
+    width: 60px;
+}
+.ri-user-3-fill,.ri-shopping-cart-2-fill{
+    font-size: 1.2rem;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.ri-menu-line{
+    display: none;
+}
+.div3{
+    display: inline-block;
+}
+.main-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+}
+@media screen and (max-width: 600px) {
+    .ri-menu-line{
+        display: block;
+    }
+     .div1,.ri-shopping-cart-2-fill,.ri-user-3-fill{
+        display: none;
+    }
+    .logo{
+        width: 40px;
+    }
+    .main-div{
+        justify-content: space-between;
+        height: 5vh;
+    }
+    .div2{
+        padding-left: 20px;
+    }
+    .div3{
+        padding-right: 20px;
+    }
+    
+}
+.div4-heading{
+    
+    font-size: 5rem;
+    color: white;
+    padding-top: 200px;
+}
+.div4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main-div2{
+    background: linear-gradient(rgba(0,0,0,0.5)),url(channel/a-smiling-young-woman-at-the-downtown-district.webp) no-repeat center center/cover fixed;
+    height: 70vh;
+}
+@media screen and (max-width: 600px) {
+    .main-div2{
+        background-attachment: scroll;
+        height: 30vh;
+    }
+    .div4-heading{
+        font-size: 2.5rem;
+        padding-top: 100px;
+    }
+    
+}
+.sp{
+    font-family: custom1;
+    color: gray;
+    font-weight:600;
+}
+.div5{
+    margin-top: 100px;
+    margin-left: 70px;
+}
+@media screen and (max-width: 600px) {
+    .sp{
+        font-size: 0.5rem;
+    }
+    .div5{
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+    
+}
+.div6-img{
+    width: 100%;
+    height: 50vh;
+    cursor: pointer;
+    
+}
+.div6{
+    width: 20vw;
+    margin-top: 50px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    
+}
+.div6:hover{
+    transform: scale(1.1);
+}
+.span-5{
+    font-family: custom1;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: grey;
+}
+.span-6{
+    font-family: custom2;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.span-7{
+    font-family: custom1;
+    font-size: 0.8rem;
+    color: grey;
+    font-weight: bold;
+}
+.div9,.div10,.div11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+.butt-2{
+    font-family: custom1;
+    padding: 5px 8px 5px 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: grey;
+    border-radius: 10%;
+    border: 1px solid lightslategrey;
+    cursor: pointer;
+    background-color: transparent;
+    transition: border 0.7s ease;
+    display: inline-block;
+    
+}
+.butt-2:hover{
+    border: 1px solid black;
+}
+.div12{
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+.butt-3{
+    background-color: black;
+    border-radius: 100%;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+.butt-3:hover{
+    border: 1px solid black;
+}
+.butt-4{
+    background-color: white;
+    border-radius: 100%;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+.butt-4:hover{
+    border: 1px solid black;
+}
+.butt-5{
+    background-color: red;
+    border-radius: 100%;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+.butt-5:hover{
+    border: 1px solid black;
+}
+.butt-6{
+    background-color: green;
+    border-radius: 100%;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+  
+}
+.butt-6:hover{
+    border: 1px solid black;
+}
+.div13{
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+.main-div3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+@media screen and (max-width: 600px) {
+    .div6{
+        width: 40vw;
+        margin-left: 25px;
+        margin-top: 20px;
+    }
+    .div6-img{
+        height: 25vh;
+    }
+    .span-5{
+        font-size: 0.5rem;
+    }
+    .span-6{
+        font-size: 0.6rem;
+
+    }
+    .span-7{
+        font-size: 0.5rem;
+    }
+    .div9,.div10,.div11{
+        padding-top: 5px;
+    }
+    .butt-2{
+        font-size: 0.5rem;
+        padding: 2px 5px 2px 5px;
+        
+    }
+    .div12{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .div13{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .butt-3,.butt-4,.butt-5,.butt-6{
+        padding: 5px;
+        
+    }
+    .main-div3{
+        display: inline-block;
+    }
+    
+}
+.d2{
+    width: 20vw;
+    margin-top: 50px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    
+}
+.d2:hover{
+    transform: scale(1.1);
+}
+.i7{
+    width: 100%;
+    height: 45vh;
+    cursor: pointer;
+}
+.main-div5{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 600px) {
+    .i7{
+        width: 100%;
+        height: 25vh;
+    }
+    .d2{
+        width: 40vw;
+        margin-left: 25px;
+    }
+    .main-div5{
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+    
+}
+.div50-h{
+    font-family: custom2;
+    font-size: 1.5rem;
+}
+.div50-fa{
+    font-family: custom1;
+    text-decoration: none;
+    color: grey;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    font-weight: 600;
+    transition: color 0.7s ease, transform 0.5s ease-in-out;
+}
+.div50-fa:hover{
+    color: black;
+    transform: scale(1.1);
+}
+.div50-anch{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.div50{
+   
+    width: 10vw;
+    padding-left: 55px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: inline-block;
+}
+.footer-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .div50-h{
+        font-size: 0.8rem;
+    }
+    .div50-fa{
+        font-size: 0.5rem;
+        padding-bottom: 5px;
+    }
+    .div50{
+        width: 30vw;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .div50-anch{
+        margin-top: 20px;
+    }
+}
+hr{
+    color: black;
+}
+.last-para{
+    font-family: custom1;
+    font-size: 1rem;
+    color: gray;
+    font-weight: 600;
+}
+.last-div{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .last-para{
+        font-size: 0.5rem;
+    }
+    .last-div{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+}
+footer{
+    background-color: lightgrey;
+}
+.butt-add-cart {
+    padding: 10px 20px 10px 20px;
+    font-family: custom1;
+    font-weight: bold;
+    font-size: 0.7rem;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+    transition: color 0.7s ease, background-color 0.7s ease, transform 0.5s ease-in-out;
+}
+.butt-add-cart:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+.div14-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;  /* Matches padding in similar divs like .div9, .div10, .div11 */
+}
+@media screen and (max-width: 600px) {
+    .div14-add {
+        padding-top: 10px;
+    }
+    .butt-add-cart {
+        font-size: 0.5rem;
+        padding: 5px 10px 5px 10px;
+    }
+}
+footer{
+    margin-top: 50px;
+}

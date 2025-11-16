@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styleora - SignIn</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="icon" type="image/png" href="channel/new.png">
+    <!-- Load Remix Icons for social media -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="login-form.css">
+    </head>
+<body>
+<div class="parent-div">
+        <div class="main">
+            <!-- Logo - Using a placeholder image since local files are not supported -->
+            <div class="brand-logo">
+                <img class="logo" src="channel/slogo black.png" alt="Styleora Logo">
+            </div>
+            <div class="name">
+                <span class="name-span">Styleora</span>
+            </div>
+        </div>
+        
+        <div class="child-div">
+            <div class="slogan">
+                <p class="para">Welcome to Styleora!</p>
+                <p class="para2">Please sign in to your account and start shopping.</p>
+            </div>
+            
+            <!-- Form Fields -->
+            <form id="signInForm">
+                <div class="feilds">
+                    <label for="email" class="feilds-span">EMAIL OR USERNAME</label>
+                    <input class="email" id="email" type="text" placeholder="Enter your Email-Id or Username">
+                    <p class="error" id="emailError">Please enter your email or username.</p>
+                </div>
+
+                <div class="feild2">
+                    <div class="feild2-header">
+                        <label for="password" class="feilds2-para">PASSWORD</label>
+                        <a href="#" class="feilds2-para2">forgot password?</a>
+                    </div>
+                    <input class="password" id="password" type="password" placeholder="Password">
+                    <p class="error" id="passwordError">Please enter your password.</p>
+                </div>
+
+                <div class="f3">
+                    <input class="checkbox" type="checkbox" id="rememberMe">
+                    <label for="rememberMe" class="remm">Remember Me</label>
+                </div>
+
+                <div class="signin">
+                    <button type="submit" id="signinBtn">Sign In</button>
+                </div>
+            </form>
+            
+            <div class="separator">
+                <hr class="line">
+                <span class="or">or</span>
+                <hr class="line">
+            </div>
+            
+            <!-- Social Icons -->
+            <div class="icons">
+                <i class="ri-facebook-fill"></i>
+                <i class="ri-twitter-fill"></i>
+                <i class="ri-google-fill"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal Structure -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <i class="ri-check-line modal-icon"></i>
+            <h2 class="modal-title">Success!</h2>
+            <p class="modal-message">Sign In Successful! Redirecting to Home page...</p>
+        </div>
+    </div>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('signInForm');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const successModal = document.getElementById('successModal');
+
+            // Function to validate a single field
+            const validateField = (input, errorElement) => {
+                if (input.value.trim() === '') {
+                    errorElement.classList.add('visible');
+                    input.classList.add('border-red-500'); // Tailwind class for error state
+                    return false;
+                } else {
+                    errorElement.classList.remove('visible');
+                    input.classList.remove('border-red-500');
+                    return true;
+                }
+            };
+
+            // Event listener for form submission
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Stop the default form submission
+
+                const isEmailValid = validateField(emailInput, emailError);
+                const isPasswordValid = validateField(passwordInput, passwordError);
+
+                if (isEmailValid && isPasswordValid) {
+                    // Show success pop-up
+                    successModal.style.display = 'flex';
+
+                    // Redirect after a short delay (e.g., 1.5 seconds)
+                    setTimeout(() => {
+                        // In a real application, this would redirect to the dashboard.
+                        // For demonstration, we use a mock redirect:
+                        window.location.href = 'index.html';
+
+                        // NOTE: Since this environment runs in an iframe, the redirect
+                        // might not execute fully, but the logic is correct.
+                    }, 1500);
+                }
+            });
+
+            // Optional: Real-time feedback when typing
+            emailInput.addEventListener('input', () => validateField(emailInput, emailError));
+            passwordInput.addEventListener('input', () => validateField(passwordInput, passwordError));
+        });
+    </script>
+    </body>
+</html>

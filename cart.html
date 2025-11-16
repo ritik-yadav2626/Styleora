@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Styleora</title>
+     <link rel="icon" type="image/png" href="channel/slogo black2.png">
+    <link rel="stylesheet" href="minorproject.css">
+    <link rel="stylesheet" href="cart.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="cart-wrapper">
+        <h2 class="cart-heading">🛍️ Your Shopping Cart</h2>
+
+        <div id="cart-items-container">
+            <p class="empty-message">Loading cart...</p> 
+        </div>
+
+        <div class="cart-summary-section">
+            <div class="summary-item">
+                <span class="summary-label">Subtotal:</span>
+                <span id="cart-total-price" class="summary-value">₹0.00</span>
+            </div>
+            
+            <div class="summary-note">
+                Shipping and taxes calculated at checkout.
+            </div>
+
+            <a href="checkout.html"><button class="checkout-button">Proceed to Checkout</button></a>
+            <a href="Shop.html" class="continue-shopping">← Continue Shopping</a>
+        </div>
+    </div>
+
+    <script src="m.js"></script>
+</body>
+</html>
